@@ -48,7 +48,9 @@
 def hashtags(str)
 	array = str.split.map { |s| s.gsub(/\W/, '') }.sort_by(&:length)[-3..-1]
 	array.map{|s| s.start_with?("#") ? s : s.prepend("#")}
-	p array.sort!
+	array.sort!
+	array.map!(&:downcase)
+	p array
 end
 
 hashtags("How the Avocado Became the Fruit of the Global Trade")
