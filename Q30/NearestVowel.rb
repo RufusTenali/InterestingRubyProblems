@@ -5,7 +5,7 @@ def nearest(str)
 	print "]"
 end
 
-nearest("shopper")
+nearest("abcdefghijklmnopqrstuvwcxyz")
 
 # def nearest(string)
 # 	arr = string.split("")
