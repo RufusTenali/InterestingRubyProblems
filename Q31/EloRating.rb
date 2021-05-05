@@ -15,7 +15,7 @@ def eloRating(ra, rb, k, d)
 		ra = ra + k * (0 - pa)
 		rb = rb + k * (1 - pa)
 	end
-	p "Ra = #{ra.ceil} Ra = #{rb.ceil}"
+	p "Ra = #{ra.ceil} Rb = #{rb.ceil}"
 end
 
-eloRating(1200, 2000, 30, 1)
+eloRating(2300, 1600, 50, 0)
