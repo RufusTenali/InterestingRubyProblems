@@ -4,4 +4,4 @@ def check_possibility(nums)
     result = (num_diff <= 1 && num_2_diff <= 1)  
 end
 
-p check_possibility([10, 5, 7])
+p check_possibility([100, 55, 45])
