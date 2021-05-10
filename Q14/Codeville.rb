@@ -1,12 +1,12 @@
-def solution(weights, limit)
-    # p weights.sort!
+def min_boats(weights, limit)
+    limit = 200
     boats = 0
     check = 0
     index = 0
   
     weights.each do |x|
       check += weights[index] 
-      if check + weights[index] >= 200
+      if check + weights[index] >= limit
         boats += 1
         check = 0
       end
@@ -15,4 +15,4 @@ def solution(weights, limit)
     p boats
   end
   
-  solution([100, 200, 150, 80], 200)
+  min_boats([100, 200, 150, 80], 200)
