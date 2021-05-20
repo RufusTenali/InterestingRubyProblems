@@ -10,6 +10,8 @@ describe "test" do
 end
 
 def min_boats(weights, limit)
+  weights.sort!
+  weights.reverse!
     boats = 0
     check = 0
     index = 0
