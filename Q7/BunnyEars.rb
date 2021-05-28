@@ -1,9 +1,5 @@
 def bunny_ear(b)
-    if b == 0
-      return 0
-    else
+      return 0 if b == 0
       return 2 + bunny_ear(b-1)
-    end
-  end
-  
-  p bunny_ear(10)
+end
+p bunny_ear(8)
