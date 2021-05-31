@@ -1,14 +1,14 @@
-def first_game
+def first_game(conditonOne, conditonTwo)
 	check = false
 	stack = []
 	counter = 0
 	roll = 0
 	until check == true
 	roll = rand(1..6)
-		if roll == 5 && stack.empty?
+		if roll == conditonOne && stack.empty?
 			stack.push(roll)
 			# p stack
-		elsif roll == 6 && stack.pop == 5
+		elsif roll == conditonTwo && stack.pop == conditonOne
 			# p "Happened one"
 			stack.push(roll)
 			check = true
@@ -21,17 +21,17 @@ def first_game
 	p "first game counter: #{(counter)*1/36.to_f}"
 end
 
-def second_game
+def second_game(conditonOne, conditonTwo)
 check = false
 	stack = []
 	counter = 0
 	roll = 0
 	until check == true
 	roll = rand(1..6)
-		if roll == 5 && stack.empty?
+		if roll == conditonOne && stack.empty?
 			stack.push(roll)
 			# p "first #{stack}"
-		elsif roll == 5 && stack.pop == 5
+		elsif roll == conditonTwo && stack.pop == conditonOne
 			# p "Happened two"
 			stack.push(roll)
 			check = true
@@ -41,8 +41,8 @@ check = false
 		counter += 1
 	end
 	# p "second #{stack}"
-	p "Game two executed second game counter: #{(counter)*1/36.to_f}"
+	p "second game counter: #{(counter)*1/36.to_f}"
 end
 
-first_game
-second_game
+first_game(5, 6)
+second_game(5, 5)
